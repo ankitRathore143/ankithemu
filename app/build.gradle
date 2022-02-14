@@ -4,8 +4,6 @@ plugins {
 }
 
 def BASE_URL = "https://gateway.marvel.com:443/"
-def PROD_URL = "https://buy.iciciprulife.com"
-def HOME_URL = '"https://www.iciciprulife.com"'
 def PUBLIC_API_KEY = "fb41549801c99417c50812820831f89a"
 def PRIVATE_API_KEY = "a7dc52dd0f11231d9d4b5bb429393164c2181b74"
 android {
