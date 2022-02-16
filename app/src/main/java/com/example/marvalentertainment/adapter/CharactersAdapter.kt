@@ -1,5 +1,6 @@
 package com.example.marvalentertainment.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -69,20 +70,19 @@ class CharactersAdapter(private val cellClickListener: CellClickListener) :
 
 
         holder.binding.characteritemImg.setOnClickListener(object : View.OnClickListener {
-            var count: Int? = 0
             override fun onClick(view: View) {
+                Log.e("DataAdapter", charachterObject.isValid.toString())
                 if (charachterObject.isValid == true) {
                     charachterObject.isValid = false
-                    Toast.makeText(view.context,"Remove from Favourite",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(view.context, "Remove from Favourite", Toast.LENGTH_SHORT).show()
                     holder.binding.relativelayout.setBackgroundResource(R.drawable.round_black_background)
                     cellClickListener.onCellClickListener(
                         listOf(
                             charachterObject
                         )
                     )
-                } else if (charachterObject.isValid == false) {
+                } else if (charachterObject.isValid == false || charachterObject.isValid == null) {
                     Toast.makeText(view.context, "Add to Favourite", Toast.LENGTH_SHORT).show();
-
                     holder.binding.relativelayout.setBackgroundResource(R.drawable.round_red_backround)
                     charachterObject.isValid = true
                     cellClickListener.onCellClickListener(
@@ -92,6 +92,7 @@ class CharactersAdapter(private val cellClickListener: CellClickListener) :
                     )
                 } else {
                     holder.binding.relativelayout.setBackgroundResource(R.drawable.round_black_background)
+
                 }
             }
         })
@@ -116,11 +117,6 @@ class CharactersAdapter(private val cellClickListener: CellClickListener) :
         })
     }
 
-    class OnClickListener(val clickListener: (resultlist: List<Result>) -> Unit) {
-        fun onClick(resultlist: List<Result>) {
-            clickListener(resultlist)
-        }
-    }
 
     override fun getItemCount(): Int {
         return charachterlist.size

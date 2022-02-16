@@ -19,13 +19,9 @@ class FavouriteCharaFragment : Fragment() {
 
     private var _binding: FragmentFavouriteBinding? = null
     private val adapter = FavCharacterListAdapter()
-
     private val favoViewModel: FavouriteViewModel by viewModels {
         FavViewModelFactory((activity?.application as CharaterApplication).repository)
     }
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -46,6 +42,7 @@ class FavouriteCharaFragment : Fragment() {
         binding.favouritelistFavo.adapter = adapter
 
         favoViewModel.selectWords.observe(viewLifecycleOwner) {
+
             adapter.setfavCharachter(it)
             adapter.notifyDataSetChanged()
         }

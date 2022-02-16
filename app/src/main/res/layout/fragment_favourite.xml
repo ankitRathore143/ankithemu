@@ -5,11 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.favourite.FavouriteCharaFragment">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/favouritelist_favo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="visible"
         tools:listitem="@layout/favouritechar_item">
 
     </androidx.recyclerview.widget.RecyclerView>

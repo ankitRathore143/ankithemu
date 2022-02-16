@@ -30,7 +30,6 @@ class HomeFragment : Fragment(), CellClickListener {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-
     private val favouriteViewModel: FavouriteViewModel by viewModels {
 
         FavViewModelFactory((activity?.application as CharaterApplication).repository)
@@ -89,13 +88,12 @@ class HomeFragment : Fragment(), CellClickListener {
         })
 
         viewModel.getAllMovies()
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
     }
 
     fun showHide(view: View) {
@@ -105,7 +103,6 @@ class HomeFragment : Fragment(), CellClickListener {
             View.VISIBLE
         }
     }
-
 
     override fun onCellClickListener(resultlist: List<Result>) {
         favouriteViewModel.update(resultlist)

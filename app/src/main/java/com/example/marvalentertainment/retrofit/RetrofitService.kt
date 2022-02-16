@@ -43,7 +43,7 @@ interface RetrofitService {
 
             val url = request.url()
                 .newBuilder()
-                .addQueryParameter("limit", "10")
+                .addQueryParameter("limit", "100")
                 .addQueryParameter("ts", ts.toString())
                 .addQueryParameter("apikey", BuildConfig.PUBLIC_API_KEY)
                 .addQueryParameter("hash", hash)
