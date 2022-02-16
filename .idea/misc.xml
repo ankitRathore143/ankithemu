@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/drawable/ic_favorite_star_icon.xml" value="0.1" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/drawable/ic_selected_favorite_rate_star_icon.xml" value="0.1" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/drawable/round_black_background.xml" value="0.113" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/drawable/round_red_backround.xml" value="0.1" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/activity_splash.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/app_bar_main.xml" value="0.11096014492753623" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/characterslist_item.xml" value="0.11041666666666666" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/content_main.xml" value="0.17989720159908623" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/favouritechar_item.xml" value="0.1" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/fragment_char_details.xml" value="0.11096014492753623" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/fragment_favourite.xml" value="0.1" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/fragment_gallery.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/fragment_home.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/fragment_movie_details.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/fragment_slideshow.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/layout/nav_header_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/menu/activity_main_drawer.xml" value="0.146875" />
+        <entry key="..\:/Users/arathor3/AndroidStudioProjects/MarvalEntertainment/app/src/main/res/menu/main.xml" value="0.1640625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
