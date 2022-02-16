@@ -63,8 +63,10 @@ class CharactersAdapter(private val cellClickListener: CellClickListener) :
             .into(holder.binding.characteritemImg)
 
         if (charachterObject.isValid == true) {
+            holder.binding.navFavourite.visibility = View.VISIBLE
             holder.binding.relativelayout.setBackgroundResource(R.drawable.round_red_backround)
         } else {
+            holder.binding.navFavourite.visibility = View.GONE
             holder.binding.relativelayout.setBackgroundResource(R.drawable.round_black_background)
         }
 
@@ -73,6 +75,7 @@ class CharactersAdapter(private val cellClickListener: CellClickListener) :
             override fun onClick(view: View) {
                 Log.e("DataAdapter", charachterObject.isValid.toString())
                 if (charachterObject.isValid == true) {
+                    holder.binding.navFavourite.visibility = View.GONE
                     charachterObject.isValid = false
                     Toast.makeText(view.context, "Remove from Favourite", Toast.LENGTH_SHORT).show()
                     holder.binding.relativelayout.setBackgroundResource(R.drawable.round_black_background)
@@ -83,6 +86,7 @@ class CharactersAdapter(private val cellClickListener: CellClickListener) :
                     )
                 } else if (charachterObject.isValid == false || charachterObject.isValid == null) {
                     Toast.makeText(view.context, "Add to Favourite", Toast.LENGTH_SHORT).show();
+                    holder.binding.navFavourite.visibility = View.VISIBLE
                     holder.binding.relativelayout.setBackgroundResource(R.drawable.round_red_backround)
                     charachterObject.isValid = true
                     cellClickListener.onCellClickListener(
@@ -91,6 +95,7 @@ class CharactersAdapter(private val cellClickListener: CellClickListener) :
                         )
                     )
                 } else {
+                    holder.binding.navFavourite.visibility = View.INVISIBLE
                     holder.binding.relativelayout.setBackgroundResource(R.drawable.round_black_background)
 
                 }

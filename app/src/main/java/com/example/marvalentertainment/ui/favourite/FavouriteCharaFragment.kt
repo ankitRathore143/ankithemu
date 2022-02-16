@@ -13,12 +13,14 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.marvalentertainment.adapter.FavCharacterListAdapter
 import com.example.marvalentertainment.databinding.FragmentFavouriteBinding
+import com.example.marvalentertainment.model.Result
+import com.example.marvalentertainment.utils.CellClickListener
 import com.example.marvalentertainment.utils.CharaterApplication
 
-class FavouriteCharaFragment : Fragment() {
+class FavouriteCharaFragment : Fragment(), CellClickListener {
 
     private var _binding: FragmentFavouriteBinding? = null
-    private val adapter = FavCharacterListAdapter()
+    private val adapter = FavCharacterListAdapter(this)
     private val favoViewModel: FavouriteViewModel by viewModels {
         FavViewModelFactory((activity?.application as CharaterApplication).repository)
     }
@@ -53,5 +55,10 @@ class FavouriteCharaFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onCellClickListener(resultlist: List<Result>) {
+        favoViewModel.update(resultlist)
+
     }
 }

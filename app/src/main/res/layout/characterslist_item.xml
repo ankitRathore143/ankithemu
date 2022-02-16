@@ -20,6 +20,15 @@
             android:focusable="false"
             android:scaleType="fitXY" />
 
+        <ImageView
+            android:id="@+id/nav_favourite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_selected_favorite_rate_star_icon"></ImageView>
+
+
         <LinearLayout
             android:id="@+id/linearlayout"
             android:layout_width="match_parent"
