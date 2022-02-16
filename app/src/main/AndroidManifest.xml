@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.marvalentertainment">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:name=".utils.CharaterApplication"
@@ -15,6 +16,7 @@
             android:name=".ui.MainActivity"
             android:exported="true"
             android:label="@string/tital_activity_main"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.MarvalEntertainment.NoActionBar" />
         <activity
             android:name=".start.SplashActivity"

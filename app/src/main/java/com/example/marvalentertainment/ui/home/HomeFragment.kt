@@ -23,6 +23,7 @@ import com.example.marvalentertainment.ui.favourite.FavViewModelFactory
 import com.example.marvalentertainment.ui.favourite.FavouriteViewModel
 import com.example.marvalentertainment.utils.CellClickListener
 import com.example.marvalentertainment.utils.CharaterApplication
+import com.example.marvalentertainment.utils.NetworkUtils
 
 class HomeFragment : Fragment(), CellClickListener {
 
@@ -50,6 +51,16 @@ class HomeFragment : Fragment(), CellClickListener {
 
         val retrofitService = RetrofitService.getInstance(BuildConfig.BASE_URL)
         val mainRepository = ApiHelper(retrofitService)
+        viewModel = ViewModelProvider(
+            this,
+            MyViewModelFactory(mainRepository)
+        ).get(MainViewModel::class.java)
+
+        if (NetworkUtils.isInternetAvailable(requireActivity())) {
+            viewModel.getAllMovies()
+        } else {
+            binding.lodingTv.text = "No Internet Connection"
+        }
 
         val adapter = CharactersAdapter(this)
 
@@ -61,21 +72,15 @@ class HomeFragment : Fragment(), CellClickListener {
         binding.movielistActmain!!.layoutManager = layoutManager
 
         binding.movielistActmain.adapter = adapter
-        viewModel = ViewModelProvider(
-            this,
-            MyViewModelFactory(mainRepository)
-        ).get(MainViewModel::class.java)
 
         viewModel.movieList.observe(viewLifecycleOwner) {
-
             favouriteViewModel.insert(it)
-
-            binding.lodingTv.visibility = View.GONE
-            binding.movielistActmain.visibility = View.VISIBLE
         }
 
         favouriteViewModel.getdatagav.observe(viewLifecycleOwner) {
             adapter.setMovies(it)
+            binding.lodingTv.visibility = View.GONE
+            binding.movielistActmain.visibility = View.VISIBLE
 
         }
 
@@ -87,7 +92,7 @@ class HomeFragment : Fragment(), CellClickListener {
 
         })
 
-        viewModel.getAllMovies()
+
 
         return binding.root
     }
